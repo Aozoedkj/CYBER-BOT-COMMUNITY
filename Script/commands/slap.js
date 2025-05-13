@@ -1,5 +1,5 @@
 module.exports.config = {
-  name: "slap",
+  name: "صفع",
   version: "1.0.0",
   hasPermssion: 0,
   credits: "𝐂𝐘𝐁𝐄𝐑 ☢️_𖣘 -𝐁𝐎𝐓 ⚠️ 𝑻𝑬𝑨𝑴_ ☢️",
@@ -15,7 +15,7 @@ module.exports.run = async ({ api, event, args }) => {
 	const request = require('request');
 	const fs = require("fs");
     var out = (msg) => api.sendMessage(msg, event.threadID, event.messageID);
-  if (!args.join("")) return out("Please tag someone");
+  if (!args.join("")) return out("اعمل طاغ للشخص");
   else
   return axios.get('https://api.waifu.pics/sfw/slap').then(res => {
         let getURL = res.data.url;
@@ -26,7 +26,7 @@ module.exports.run = async ({ api, event, args }) => {
  let callback = function () {
             api.setMessageReaction("✅", event.messageID, (err) => {}, true);
         api.sendMessage({
-						        body: "Slapped! " + tag + "\n\n*sorry, i thought there's mosquito*",
+						        body: "صفعك " + tag + "",
                                           mentions: [{
           tag: tag,
           id: Object.keys(event.mentions)[0]

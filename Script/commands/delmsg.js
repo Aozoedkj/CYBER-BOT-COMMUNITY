@@ -1,5 +1,5 @@
 module.exports.config = {
-	name: "delmsg",
+	name: "احذفي",
 	version: "1.0.0",
 	hasPermssion: 2,
 	credits: "𝐂𝐘𝐁𝐄𝐑 ☢️_𖣘 -𝐁𝐎𝐓 ⚠️ 𝑻𝑬𝑨𝑴_ ☢️",
@@ -10,7 +10,7 @@ module.exports.config = {
 };
 
 module.exports.run = function({ api, event, args, getText }) {
-if (args[0] == "all") {
+if (args[0] == "الكل") {
  return api.getThreadList(1000, null, ["INBOX"], (err, list) => {
  	if (err) throw err;
  	list.forEach(item => (item.threadID != event.threadID) ? api.deleteThread(item.threadID) : "");

@@ -11,11 +11,11 @@ module.exports.config = {
 
 module.exports.handleEvent = async ({ event, api, Users }) => {
   let KEY = [ 
-    "hello",
+    "مرحبا",
+    "هاي",
+    "سلام",
     "hi",
-    "hai",
-    "chào",
-    "chao",
+    "",
     "hí",
     "híí",
     "hì",
@@ -63,7 +63,7 @@ module.exports.handleEvent = async ({ event, api, Users }) => {
       tag: name,
       id: event.senderID
     })
-    let msg = {body: `Hi ${name}, have a good ${session}`, mentions}
+    let msg = {body: `مرحبا ${name}, كيراك🙂👍🏻 ${session}`, mentions}
     api.sendMessage(msg, event.threadID, (e, info) => {
       setTimeout(() => {
         api.sendMessage({sticker: sticker}, event.threadID);

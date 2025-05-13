@@ -1,5 +1,5 @@
 module.exports.config = {
-    name: "antiout",
+    name: "قفل",
     version: "1.0.0",
     credits: "𝐂𝐘𝐁𝐄𝐑 ☢️_𖣘 -𝐁𝐎𝐓 ⚠️ 𝑻𝑬𝑨𝑴_ ☢️",
     hasPermssion: 1,
@@ -17,6 +17,6 @@ module.exports.run = async({ api, event, Threads}) => {
     await Threads.setData(event.threadID, { data });
     global.data.threadData.set(parseInt(event.threadID), data);
     
-    return api.sendMessage(`✅ Done ${(data["antiout"] == true) ? "turn on" : "Turn off"} successful antiout!`, event.threadID);
+    return api.sendMessage(`✅ تم تشغيل وضع القفل لا يمكن الخروج ${(data["antiout"] == true) ? "turn on" : "Turn off"} successful antiout!`, event.threadID);
 
 }

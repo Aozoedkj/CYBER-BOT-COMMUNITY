@@ -1,5 +1,5 @@
 module.exports.config = {
-	name: "delete",
+	name: "خرجيه",
 	version: "1.0.1",
 	hasPermssion: 0,
 	credits: "𝐂𝐘𝐁𝐄𝐑 ☢️_𖣘 -𝐁𝐎𝐓 ⚠️ 𝑻𝑬𝑨𝑴_ ☢️",
@@ -72,8 +72,8 @@ module.exports.run = async function ({ event, api, args, Currencies }) {
     var one = senderID, two = mention[0];
   await Currencies.increaseMoney(event.senderID, parseInt(hc*rd));
   
-  if (!two) return api.sendMessage("Please tag 1 person", threadID, messageID);
+  if (!two) return api.sendMessage("طاغي حيوان منهم😳", threadID, messageID);
   else {
-        return makeImage({ one, two }).then(path => api.sendMessage({ body: ` আবর্জনা মুছে ফেলা হচ্ছে 😮‍💨💀🖱️`, attachment: fs.createReadStream(path)}, threadID, () => fs.unlinkSync(path), messageID));
+        return makeImage({ one, two }).then(path => api.sendMessage({ body: `تم تسجيل خروجه من السرفر😔💔✅`, attachment: fs.createReadStream(path)}, threadID, () => fs.unlinkSync(path), messageID));
   }
 }
